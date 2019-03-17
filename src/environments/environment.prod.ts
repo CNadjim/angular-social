@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  backUrl: 'http://localhost:8080',
-  frontUrl: 'http://localhost:4200'
+  backUrl: 'http://137.74.44.48:8060',
+  frontUrl: 'http://137.74.44.48:8070'
 };
