@@ -1,0 +1,47 @@
+@import '~@angular/material/theming';
+:host{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 100%;
+
+  header{
+    background: rgba(0,0,0,.03);
+    color: rgba(0,0,0,0.7);
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    section{
+      padding: 56px 0;
+    }
+  }
+  section{
+    max-width: 920px;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    p{
+      padding: 0 10px;
+    }
+  }
+  .image-wrapper{
+    max-width: 150px;
+    border: 0px solid rgba(0,0,0,0.0);
+    border-radius: 50%;
+    overflow: hidden;
+    @include mat-elevation(8);
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .description{
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h4,h5{
+      margin: 0;
+    }
+  }
+}

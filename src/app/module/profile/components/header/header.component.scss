@@ -1,0 +1,42 @@
+@import '~@angular/material/theming';
+:host{
+  z-index: 2;
+  mat-toolbar{
+    padding: 0;
+    @include mat-elevation(6);
+    h2{
+      margin: 0 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    nav{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+
+      a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        padding: 0 24px;
+        cursor: pointer;
+        height: 100%;
+        letter-spacing: 0;
+        opacity: .87;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 400;
+        text-decoration: none;
+      }
+      a:hover{
+        background-color: #d32f2f;
+      }
+    }
+  }
+}

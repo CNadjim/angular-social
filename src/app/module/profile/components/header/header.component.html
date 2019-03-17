@@ -1,0 +1,26 @@
+<mat-toolbar color="warn" >
+  <nav >
+    <a href="/">
+      <img src="assets/angular-logo.svg">
+      <span>Angular social</span>
+    </a>
+  </nav>
+  <nav fxHide fxShow.gt-xs>
+    <a href="https://github.com/CNadjim/angular-oauth2" fxLayoutGap="10px">
+      <mat-icon>info</mat-icon>
+      <span>github</span>
+    </a>
+  </nav>
+  <span fxFlex="1 0 auto"></span>
+  <nav fxHide fxShow.gt-xs>
+    <a (click)="logout()" fxLayoutGap="10px">
+      <mat-icon>exit_to_app</mat-icon>
+      <span>logout</span>
+    </a>
+  </nav>
+  <nav fxHide fxShow.lt-sm >
+    <a (click)="toggleDrawer()">
+      <mat-icon>menu</mat-icon>
+    </a>
+  </nav>
+</mat-toolbar>

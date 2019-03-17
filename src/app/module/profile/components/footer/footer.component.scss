@@ -1,0 +1,19 @@
+:host{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 100%;
+  margin-top: 30px;
+  mat-toolbar{
+    padding: 10px 30px;
+    height: auto !important;
+
+    .credit{
+      font-size: 12px;
+      margin: 0 0 0 20px;
+      opacity: .54;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+}

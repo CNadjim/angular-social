@@ -1,0 +1,30 @@
+<header>
+  <section>
+    <ng-container *ngIf="authService.currentUser.imageUrl">
+      <div class="image-wrapper" [@animate]="{value:'*',params:{duration: '300ms',delay:'0ms',scale:'0.1'}}">
+        <img src="{{authService.currentUser.imageUrl}}" />
+      </div>
+    </ng-container>
+    <div class="description">
+      <h4>{{authService.currentUser.name}}</h4>
+      <h5>{{authService.currentUser.email}}</h5>
+    </div>
+  </section>
+</header>
+<section>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nibh turpis, feugiat ut faucibus id, dignissim vel arcu. Phasellus id euismod libero. Suspendisse potenti. Morbi ac viverra velit, sed luctus ipsum. Proin tincidunt nisl a tellus tempor efficitur. In quis augue consectetur, accumsan nunc sit amet, malesuada tortor. Ut vestibulum, leo eu faucibus tristique, leo tortor volutpat massa, sed imperdiet neque erat ac neque. Nunc enim metus, gravida quis nibh vel, vehicula luctus enim. Donec vel venenatis augue, eget pretium ipsum. Mauris bibendum mauris ac porttitor gravida. Vivamus eleifend, nunc in fermentum viverra, nulla lacus euismod odio, quis cursus tellus ligula non erat.
+  </p>
+  <p>
+    Nulla sodales risus et lacus placerat, non viverra elit scelerisque. Integer non hendrerit ante. Phasellus hendrerit blandit erat eget consequat. Nam sed erat in metus tempus gravida eget nec enim. Nunc aliquet lacus nunc, a luctus enim porta vitae. Etiam elementum ligula in laoreet sollicitudin. Quisque eu enim ac nunc malesuada ornare. Curabitur sit amet fermentum orci, sit amet convallis erat. Nulla tempor urna turpis, a ornare quam laoreet ornare. Aliquam luctus diam in odio faucibus ullamcorper. Donec fermentum nibh sem, eget tincidunt dui fringilla eget. Nam a metus sit amet lorem accumsan commodo. Phasellus dictum dignissim lectus. Duis ornare nisl nisi, et blandit libero elementum a. Curabitur et neque at nisl bibendum suscipit ac quis diam. Integer at eleifend turpis.
+  </p>
+  <p>
+    Vivamus fringilla, turpis at posuere viverra, turpis tortor pharetra augue, eget luctus arcu arcu eu felis. Sed condimentum leo sit amet ex facilisis dignissim. Vestibulum elementum eros sit amet risus vestibulum vehicula. Proin mauris urna, luctus id consectetur non, sollicitudin id augue. Phasellus vitae accumsan nisi. Vivamus eu tincidunt ante. In vitae nulla imperdiet, tristique diam ac, commodo orci. Fusce nec neque eros. Nullam iaculis nisl sapien. Nunc imperdiet id ex ut vulputate. Pellentesque vitae rutrum ex. Maecenas pharetra sagittis sodales. Nam sed leo volutpat, bibendum ligula eget, vestibulum erat.
+  </p>
+  <p>
+    Maecenas volutpat dictum nibh id tincidunt. Mauris ut dolor urna. Nullam ut sem lorem. Vestibulum congue sit amet libero ac scelerisque. Nam accumsan justo id lectus tristique, vel maximus velit malesuada. Suspendisse sit amet accumsan tortor. Donec arcu magna, accumsan vel ante vel, vehicula molestie massa. Vivamus pulvinar pellentesque velit vel dapibus. Aliquam facilisis arcu tellus, eu sollicitudin ex pellentesque ut. Morbi aliquet dapibus condimentum.
+  </p>
+  <p>
+    Pellentesque rutrum at mauris a dapibus. Quisque fermentum diam sit amet finibus consectetur. Maecenas vestibulum consectetur neque, vel viverra risus ornare eu. Maecenas gravida ante facilisis eros porttitor, in ultrices mi laoreet. Aenean scelerisque nisl ac ex imperdiet, sed luctus augue commodo. Ut bibendum ultricies ultricies. Nulla sit amet turpis auctor, consectetur nibh at, faucibus nibh. Nulla dapibus rhoncus dapibus.
+  </p>
+</section>
