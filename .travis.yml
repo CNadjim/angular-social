@@ -28,7 +28,7 @@ after_success:
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
   - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
   - export IMAGE_NAME=angular-social
-  - docker build -t $IMAGE_NAME:$COMMIT .
-  - docker tag $IMAGE_NAME:$COMMIT $DOCKER_USER/$IMAGE_NAME:$TAG
+  - docker build -t $IMAGE_NAME .
+  - docker tag $IMAGE_NAME $DOCKER_USER/$IMAGE_NAME
   - docker push $DOCKER_USER/$IMAGE_NAME
   - sshpass -p $DEPLOY_PASS ssh -o stricthostkeychecking=no $DEPLOY_USER@$DEPLOY_HOST bash /$IMAGE_NAME/start.sh
