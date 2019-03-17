@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
 
-![Preview](https://raw.githubusercontent.com/CNadjim/angular-oauth2/master/src/assets/screen.png)
+![Preview](https://github.com/CNadjim/angular-social/blob/master/src/assets/screen.png)
 
 ## Development server
 
