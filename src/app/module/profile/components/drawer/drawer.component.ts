@@ -3,6 +3,7 @@ import {ProfileService} from "../../services/profile.service";
 import {AuthenticationService} from "../../../authentication/services/authentication.service";
 import {Router} from "@angular/router";
 import {TokenStorage} from "../../../authentication/services/token.storage";
+import {environment} from "../../../../../environments/environment";
 
 @Component({
   selector: 'app-drawer',
@@ -25,8 +26,8 @@ export class DrawerComponent implements OnInit {
     this.authService.currentUser = null;
   }
 
-  location(url : string){
-    window.location.href = url;
+  openGithub(){
+    window.open(environment.github,'_blank');
   }
 
 }

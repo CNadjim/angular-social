@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   backUrl: 'http://localhost:8080',
-  frontUrl: 'http://localhost:4200'
+  frontUrl: 'http://localhost:4200',
+  github: 'https://github.com/CNadjim/angular-social'
 };
 
 /*

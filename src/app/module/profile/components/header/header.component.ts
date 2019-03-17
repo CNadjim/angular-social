@@ -3,6 +3,7 @@ import {AuthenticationService} from "../../../authentication/services/authentica
 import {Router} from "@angular/router";
 import {TokenStorage} from "../../../authentication/services/token.storage";
 import {ProfileService} from "../../services/profile.service";
+import {environment} from "../../../../../environments/environment";
 
 @Component({
   selector: 'app-header',
@@ -27,6 +28,10 @@ export class HeaderComponent implements OnInit {
 
   toggleDrawer(){
     this.profileService.drawer.toggle();
+  }
+
+  openGithub(){
+    window.open(environment.github,'_blank');
   }
 
 }

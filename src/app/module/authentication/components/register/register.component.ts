@@ -62,14 +62,14 @@ export class RegisterComponent implements OnInit, OnDestroy {
 
   submit(){
     this.submitted = true;
-    let registerRequest= new RegisterRequestModel(this.registerForm.value.name,this.registerForm.value.email,this.registerForm.value.password);
+    let registerRequest= new RegisterRequestModel(this.registerForm.value.name,this.registerForm.value.email.toLowerCase(),this.registerForm.value.password);
 
     this.authService.attemptSignUp(registerRequest).toPromise()
       .then(res => {
         setTimeout(()=>{
           this.submitted = false;
           this.snackBar.show(SnackBarType.success,"Successful registration of "+this.registerForm.value.name);
-          this.router.navigate(['/auth/login'],{ queryParams: { email: this.registerForm.value.email } });
+          this.router.navigate(['/auth/login'],{ queryParams: { email: registerRequest.email} });
         },1000);
 
       }).catch(error => {
