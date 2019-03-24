@@ -13,7 +13,7 @@ services:
       - "traefik.docker.network=social"
       - "traefik.enable=true"
       - "traefik.frontend.rule=Host:web.spring-social.ovh"
-      - "traefik.port=8070"
+      - "traefik.port=80"
 networks:
   social:
     external: true
