@@ -9,9 +9,10 @@ services:
     ports:
       - "8070:80"
     labels:
+      - "traefik.backend=angular-social"
       - "traefik.docker.network=social"
       - "traefik.enable=true"
-      - "traefik.frontend.rule=Host:spring-social.ovh"
+      - "traefik.frontend.rule=Host:web.spring-social.ovh"
       - "traefik.port=8070"
 networks:
   social:
