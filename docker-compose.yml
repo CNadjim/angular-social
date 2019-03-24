@@ -3,5 +3,16 @@ services:
   angular-social:
     container_name: angular-social
     image: nadjim/angular-social
+    networks:
+      - social
+      - default
     ports:
       - "8070:80"
+    labels:
+      - "traefik.docker.network=social"
+      - "traefik.enable=true"
+      - "traefik.frontend.rule=Host:spring-social.ovh"
+      - "traefik.port=8070"
+networks:
+  social:
+    external: true
