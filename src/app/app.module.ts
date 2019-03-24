@@ -9,6 +9,8 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {TokenInterceptor} from "./module/authentication/services/token.interceptor";
 import {AuthenticationService} from "./module/authentication/services/authentication.service";
 import {TokenStorage} from "./module/authentication/services/token.storage";
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 export function init_app(authService: AuthenticationService,tokenStorage : TokenStorage) {
   return () => tokenStorage.getToken() ? authService.initUser() : null;
@@ -23,7 +25,8 @@ export function init_app(authService: AuthenticationService,tokenStorage : Token
     BrowserAnimationsModule,
     SharedModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     {
